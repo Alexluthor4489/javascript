@@ -29,7 +29,10 @@
         let n2 = parseInt(prompt('Qual a idade da Franciele?'))
         let n3 = parseInt(prompt('Qual a idade do Alex?'))
         let soma = n1 + n2 + n3
-        alert('A idade de ' +nome1+ ' é: ' +n1+ ' anos, a idade de ' +nome2+ ' é: ' +n2+ ' anos e a idade de ' +nome3+ ' é: ' +n3+ '. Nossas idades juntas somam: '  +soma+ ' anos!')
+        //MÉTODO TRADICIONAL
+        /*alert('A idade de ' +nome1+ ' é: ' +n1+ ' anos, a idade de ' +nome2+ ' é: ' +n2+ ' anos e a idade de ' +nome3+ ' é: ' +n3+ ' anos. Nossas idades juntas somam: '  +soma+ ' anos!')*/
+        //TEMPLATE STRING
+        alert(`A idade de ${nome1} é: ${n1} anos, a idade de ${nome2} é ${n2} anos e a idade de ${nome3} é: ${n3} anos. Nossas idades juntas somam: ${soma} anos!`)
     </script>
 </body>
 </html>

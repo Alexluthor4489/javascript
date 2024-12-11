@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OPERADORES PARTE2</h1>
+    <script>// Precendencia: Operadores Aritméticos => Operadores Relacionais => Operadores Lógicos
+
+        //RELACIONAIS *Nao tem ordem de precedencia
+
+        //(> MAIOR), (< MENOR), (>= MAIOR OU IGUAL), (<= MENOR OU IGUAL), (== IGUAL), (!= DIFERENTE), (=== IGUAL EM VALOR E TIPO), (!== DIFERENTE EM VALOR E TIPO)
+
+        5 > 2  // true
+        7 < 4  // false
+        8 >= 8 // true
+        9 <= 7 // false
+        5 == 5 // true
+        4 != 4 // false
+
+        //LÓGICOS *Precedencia: ! => && => ||
+
+        // ! (Negação), && (Conjunção "e"), || (Disjunção "ou")
+
+        //true && true = true
+        //true && false = false
+        //false && true = false
+        //false && false = false
+
+        //true || true = true
+        //true || false = true
+        //false || true = true
+        //false || false = false
+
+        //TERNÁRIO
+
+        // ? :
+
+        let media = 6
+        media > 7?'APROVADO':'REPROVADO'// REPROVADO
+        media > 5?'APROVADO':'REPROVADO'// APROVADO
+    </script>
+</body>
+</html>

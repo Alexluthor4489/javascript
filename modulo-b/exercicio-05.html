@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OPERADORES PART1</h1>
+    
+    <script>
+
+        //ORDEM DE PRECEDENCIA => PEMDAS => (), EXPONECIAÇÃO, X e /, + e -
+        let a = 5 + 3 //8
+        let b = a % 5 //3
+        let c = 5 * b ** 2 //45
+        let d = 10 - a / 2 //6
+        let e = 6 * 2 / d //2
+        let f = b % e + 4 / e //3
+
+        //AUTO ATRIBUÍÇÃO
+         let n = 3
+         n = n + 4 // n agora vale 7 (3+4)
+         n = n - 5 // n agora vale 2 (7-5)
+         n = n * 4 // n agora vale 8 (2x4)
+         n = n / 2 // n agora vale 4 (8/4)
+         n = n ** 2 // n agora vale 16 (4 ao quadrado)
+         n = n % 5 // n agora vale 1 (16/5 = 5 e resta 1)
+
+         //FORMA SIMPLIFICADA
+         n += 4
+         n -= 5
+         n *= 4
+         n /= 2
+         n **= 2
+         n %= 5
+
+         //INCREMENTO
+         let x = 10
+         n++ // n agora vale n + 1 (10 + 1 = 11)
+         n-- // n agora vale n - 1 (11 - 1 = 10)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*DOCUMENT.WRITE
+        
+        O document.write é uma forma de exibir o conteúdo na tela ao invés de exibir em um alert ou no console.*/
+        let nome = prompt('Qual é o seu nome?')
+        document.write(`O seu nome é ${nome}, e ele tem ${nome.length} letras!`)
+        document.write(`Seu nome em maiúsculo fica desta forma: ${nome.toUpperCase()} e em letras minúsculas fica desta forma: ${nome.toLowerCase()} !`)
+
+        /*OUTRAS CONFIGURAÇÕES DE NUMBERS*/
+
+        let n1 = Number(prompt('Digite um número com ponto fluante:'))
+        alert(n1.toFixed(2))/*Fixa duas casas decimais ao final do número*/
+        alert(n1.toFixed(2).replace('.',','))/*Troca o ponto pela vírgula*/
+        alert(n1.toLocaleString('pt-BR', {style: 'currency',currency:'BRL' }))/*Esse comando apezar de bem chato de escrever, é bem útil, pois representa o sifrão de uma determinada moéda. Primeiro foi definido qual grupo de string: definimos como pt-BR, ou seja, pertence ao português do Brasil. Depois foi definido seu estilo através do style: 'currency' significa que queremos uma representação monetária. Por último definimos de qual pais é o sifrão com o corrency:'BRL'. Caso queira trocar para Euro, Dólar ou qualquer outra sifra, basta trocar o 'BRL' pelo desejado.*/
+    </script>
+</body>
+</html>

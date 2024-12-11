@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=hi, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+        h1 {
+            color: gold;
+            font-size: 4em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Começando no JavaScript!</h1>
+    <script>
+        /*CONVERTER STRING EM NÚMERO*/
+
+        let n1 = parseInt(prompt('Digite um número:'))/*Por padrão o conteúdo de um prompt e uma string. Quando precisamos trabalhar com números detro de um prompt então temos que converte-lo para number sando o parseInt se for números inteiros ou parseFloat se for números quebrados.*/
+        let n2 = parseInt(prompt('Digite outro número'))/*Por padrão o conteúdo de um prompt e uma string. Quando precisamos trabalhar com números detro de um prompt então temos que converte-lo para number sando o parseInt se for números inteiros ou parseFloat se for números quebrados.*/
+        let n3 = Number(prompt('Digite o ultimo número'))/*Esta é uma forma mais simple de fazer esta conversão, o Number converte o número idependente de qual tipo ele seja. O JS lê e interpreta automaticamente o número, portanto é mais simples usar o "Number"*/
+        let s = n1 + n2 + n3
+        alert('A soma de n1 + n2 + n3 é: '+s)
+
+        /*CONVERTER UM NÚMERO EM UMA STRING
+        
+        String(n) É semelhante ao Number
+        n.toString() É um pouco diferente, aqui você pega o que você quer converter seguido de ".toString" */
+
+        let n4 = n1.toString()
+        let n5 = String(n2)
+        let n6 = n3.toString()
+        let sc = n4 + n5+ n6
+        alert('A soma dos números convertidos em string é: '+sc)
+
+        /*FORMATANDO STRINGS*/
+
+        let p1 = alert('Java script'.length)/*Conta quantas carácteres tem a palavra ou frase. Lembrando que os espaços também são contados.*/
+        let p2 = alert('Linguagem web'.toUpperCase())/*Transforma a string em maiúscula*/
+        let p3 = alert('LINGUAGEM WEB'.toLowerCase())/*Tramsforma maiúscula em minúscula*/
+
+    </script>
+</body>
+</html>
