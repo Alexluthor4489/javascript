@@ -15,10 +15,11 @@
     </style>
 </head>
 <body>
-    <h1>Iniciando os estudos de DOM</h1>
-    <p>Aqui vai o resultado</p>
-    <p>aprendendo a usar o <strong>Dom</strong> em JavaScript</p>
-    <div>Clique em mim</div>
+    <h1 class="titulo">Iniciando os estudos de DOM. </h1>
+    <h2 class="s-titulo">Conhecendo uma árvore DOM</h2>
+    <p>Aqui vai o resultado.</p>
+    <p>Aprendendo a usar o <strong>Dom</strong> em JavaScript. </p>
+    <div id="teste">Clique em mim. </div><br>
     
     <script>
         //DOM => Document Object Model (Modelo de objetos para documentos)
@@ -28,7 +29,45 @@
         //Parent => Quer dizer parent Ex: O Document é parent de Html que é parent de head e body.
         //child => Quer dizer filho, se refere a um documento que está dentro de uma documento pai. Ex; h1 é child de body, que é child de html que é child de document.
 
-        window.document.write('Olá')
+        //window.document.write(window.document)
+
+        //SELECIONANDO ELEMENTOS
+        //5 FORMAS DE SELECIONAR ELEMENTOS
+
+        //1 => MARCA => getElementByTagName()
+        //2 => ID => getElementoById()
+        //3 => NOME => getElementByName()
+        //4 => CLASSE => getElementByClassName()
+        //5 => SELETOR => querySelector ou querySelectorAll
+        
+        //getEmentsByTagName
+
+        let p1 = document.getElementsByTagName('p')[0]/*Criei uma variável e nela vou armazenar o documento que contem a tag com o nome (p) na posição [1], ou seja, segunda posição. */
+        document.write('Está escrito assim: '+ p1.innerText)// Aqui estou dizendo para escrever na página o que esta dentro de document, que está dentro da variável p1. Se deixar apenas o nome da variável p1 vai ser exibido na tela apenas que se trata de um parágrafo. Para que o conteúdo desse parágrafo seja exibido e preciso usar o innertext, ou seja, ler o texto.
+
+        let p2 = document.getElementsByTagName('p')[1]
+        document.write('Aqui está: ' + p2.innerHTML)//Aqui foi usado um exemplo muito parecido com o anterior apenas para mostrar que quando você usa o innerHTML, o conteúdo da tag selcionada será exibido com sua fromatação, dierente do innerText que não pega a formatação que foi aplicada como neste caso acima, ela não pegou o efeito da tag strong e com o innerHTML sim.
+
+        //getElementById
+
+        let d = document.getElementById('teste')
+        document.write('Essa é minha div: ' + d.innerHTML)
+        d.style.background = 'green'
+        d.innerHTML= 'Mudei para: Estou aguardando'
+
+        //getElementByClassName
+
+        let t = document.getElementsByClassName('titulo')[0]//Como ele retorna mais de um elemnto por se tratar de uma classe, mesmo que você só tenha 1 elmento com esta classe, você terá que especificar qual é a posição, bastando colocar o 0.
+        document.write('Meu título é: ' + t.innerHTML)
+        t.style.background = 'yellow' 
+        t.style.color = 'darkblue'
+
+        //querySelector ou querySelectorAll
+
+        let st = document.querySelector('.s-titulo')
+        st.style.background = 'grey'
+
+
     </script>
 </body>
 </html>
