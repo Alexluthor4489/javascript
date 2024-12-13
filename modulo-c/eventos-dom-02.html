@@ -21,12 +21,17 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id="area">
         Interaja...
     </div>
 
     <script>
+
         let evento = document.getElementById('area')
+        /*No exemplo anterior, os eventos foram adicionados diretamente no nosso html dentro da div, só que isso acaba deixando o nosso html muito poluído. Pensando nisso, nesse exemplo vamos ter o mesmo resultado, porém definindo esses eventos dentro do JS, para isso vamos usar um ouvinte de lista, ou seja ele ouve o evento que desejamos que aconteça. Se trata do addEventListener*/
+        evento.addEventListener('click', clicar)//variável desejada.assEventListener('Qual evento', De qual function)
+        evento.addEventListener('mouseenter', entrar)//variável desejada.assEventListener('Qual evento', De qual function)
+        evento.addEventListener('mouseout', sair)//variável desejada.assEventListener('Qual evento', De qual function)
         
         function clicar() {
             evento.innerHTML = 'Cliquei'
