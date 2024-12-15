@@ -4,12 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos Dom: Somando Números</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body, input {
+            font: normal 18pt Arial;
+            background-color: rgb(203, 201, 201);
+        }
+        div.container{
+            width: 28%;
+            height: 250px;
+            background-color: gainsboro;
+            border: 1px solid rgba(0, 0, 0, 0.37);
+            border-radius: 10px;
+            padding: 10px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        input, div{
+            margin-top: 10px;
+        }
+        input {
+            border-radius: 3px;
+        }
+        .botao{
+            display: flex;
+            background-color: rgb(135, 250, 187);
+            font-size: 15pt;
+            padding: 5px;
+            cursor: pointer;
+        }
+        div > h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Somando Valores</h1>
-    <input type="number" name="" id="valor-1"> +
-    <input type="number" name="" id="valor-2">
-    <input type="button" value="somar" onclick="somar()">
+    <div class="container">
+        <h1>Somando Valores</h1>
+        <input type="number" name="valor-1" id="valor-1"> +
+        <input type="number" name="valor-2" id="valor-2">
+        <input type="button" class="botao" value="Somar" onclick="somar()">
+        <div id="res">Resultado: </div>
+    </div>
+
+
+    <script>
+
+        function somar() {
+
+            let v1 = document.getElementById('valor-1')
+            let v2 = document.getElementById('valor-2')
+            let res = document.getElementById('res')
+            let n1 = Number(v1.value)
+            let n2 = Number(v2.value)
+            let s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2}, resultou em: ${s}!`
+            
+        }
+    </script>
     
 </body>
 </html>
