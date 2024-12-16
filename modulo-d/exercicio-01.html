@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+    <style>
+        body{
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            flex: row wrap;
+            justify-content: center;
+            align-items: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 1.5em;
+            background-color: rgb(236, 237, 247);
+        }
+        .container{
+            width: 500px;
+            height: 350px;
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 15px;
+            text-align: center;
+            background-color: lavender;
+            box-shadow: 5px 5px 10px rgba(158, 42, 207, 0.384);
+        }
+        input{
+            display: block;
+            margin: auto;
+            border-radius: 5px;
+            border: none;
+            padding: 10px;
+        }
+        #btn, #btn2{
+            display: inline;
+            margin: 10px;
+            width: 16%;
+            cursor: pointer;
+        }
+        #btn:hover,#btn2:hover{
+            background-color: indigo;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nacionalidade</h1>
+        <p>De que país você ?</p> <input type="text" name="text" id="pais" required>
+        <input type="button" value="Enviar" id="btn" onclick="nacio()">
+        <input type="button" value="limpar" id="btn2" onclick="clean()">
+        <div id="res"></div>
+    </div>
+
+    <script>
+        
+        function nacio() {
+            let nacionalidade = "Brasil"
+            let nacio = document.getElementById('pais')/*Essa variável coleta os valores do input*/
+            let suaNacio = nacio.value/*Essa variável vai receber o valor que foi digitado dentro do input que está armazenado entro da variável nacio*/
+            let res = document.getElementById('res')/*Essa variável é responsável pela resposta ou a mensagem que aparecerá*/
+            
+            if(suaNacio === "" ){/*Se o conteúdo de suaNacio for vazio ou seja se tentarmos enviar o formuário sem antes ter preenchido, ele vai disparar essa condição */
+                res.innerHTML = 'Insira sua nacionalidade!'/*Aqui estamos gerando um valor de texto para a variável res*/
+            }
+            else if( suaNacio === nacionalidade){
+                res.innerHTML = 'Você é brasileiro! Vaza daí o quanto é tempo, lá ele.'
+            }
+            else{
+                res.innerHTML = 'Você é estrangeiro! Ai sim heein!!!'
+            }
+        }
+        function clean(){/*Aqui criamos uma fuction para limpar o formulário e o seu nome é indicando o evento do onclik*/
+            const nacio = document.getElementById('pais')/*Como se trata de outra function então podemos repetir o mesmo nome da variável pois ela não se encontra no mesmo escopo.*/
+            const res = document.getElementById('res')/*Como se trata de outra function então podemos repetir o mesmo nome da variável pois ela não se encontra no mesmo escopo.*/
+            nacio.value = ""/*Aqui estamos dizendo que o valor da variável nacio reponsável pela entrada do input será vazio quando o onclik disparar o evento.*/
+            res.innerHTML = ""/**Aqui estamos dizendo que o innerHTML da variável res será vazio quando o onclik disparar o evento de click.*/
+        }
+       
+    </script>
+</body>
+</html>
