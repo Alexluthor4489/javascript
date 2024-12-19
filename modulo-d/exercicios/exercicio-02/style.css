@@ -17,8 +17,8 @@ body{
     
 }
 section{
-    min-width: 400px;
-    min-height: 300px;
+    min-width: 600px;
+    min-height: 400px;
     background-color: lavender;
     border-radius: 25px;
     margin: 35px;
