@@ -5,8 +5,13 @@ function calcular(){
     let mensagem = document.getElementById('msg')
     let aniversario= nascimento.value
     
-    let sexoMarcado = document.querySelector('input[name="sexo"]:checked')
-    let seuSexo = sexoMarcado ? (sexoMarcado.id === "sex-m"? "Masculino" : "Feminino") : ""
+    let sexoMarcado = document.querySelector('input[name="sexo"]:checked')/*Aqui, document.querySelector encontra o elemento <input> que tem o atributo name="sexo" e está marcado (:checked).
+    Se nenhum botão estiver marcado, sexoMarcado será null. */
+    let seuSexo = sexoMarcado ? (sexoMarcado.id === "sex-m"? "Masculino" : "Feminino") : ""/*O operador ternário (? :) verifica se sexoMarcado não é null. Se for, ele continua a lógica. Se for null, define uma string vazia (""). Aqui, verifica-se o id do botão selecionado:
+
+    Se o id for "sex-m", define "Masculino".
+    Caso contrário, define "Feminino".
+    */ 
     let calc = anoAtual - Number(aniversario)
     
     mensagem.innerHTML= `Você é do sexo: ${seuSexo}, e tem ${calc} anos de idade!`
