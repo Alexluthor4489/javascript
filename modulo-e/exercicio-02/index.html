@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício laços de repetição</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+
+        <div>
+            <p>
+                <label for="numero">Número</label>
+                <input type="number" name="iniciar" id="numero">
+                <input type="button" value="Gerar Tabuada" id="btn" onclick="tabuada()">
+            </p>
+        </div>
+        <div id="sel">
+            <select name="tabuada" id="seltab" size="10">
+
+            </select>
+        </div>
+        <div id="clean">
+            <p>
+                <input type="button" value="Limpar Tabuada" id="btnClear" style="display: none;" onclick="limparTabuada()">
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVideo</p>
+    </footer>
+
+   <script src="main.js"></script>
+</body>
+</html>
