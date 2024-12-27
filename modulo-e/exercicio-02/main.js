@@ -23,6 +23,6 @@ function tabuada(){
       c++
     }
     tab.style.display = 'block' // Mostra o select
-    btnClear.style.display = 'inline'; // Mostra o botão "Limpar Tabuada"
+    btnClear.style.display = 'inline'; // Mostra o botão "Limpar Dados"
   }
 }
